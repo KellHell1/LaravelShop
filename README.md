@@ -7,3 +7,6 @@ sudo chmod -R a+rw storage
 php artisan route:clear
 php artisan config:clear
 php artisan cache:clear
+
+## migrations
+php artisan migrate
