@@ -8,9 +8,9 @@ class ProductController extends Controller
 {
     public function getAllProducts()
     {
-        $products = Product::all()->where('id', '=', 1);
+        $products = Product::all();
 
-        return $products;
+        return view('products', ['products' => $products]);
     }
 
     public function createProduct()
