@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// default
 Route::get('/', function () {
     return view('welcome');
 });
 
+
+// test
 Route::get('/hello', [TestController::class, 'test']);
+
+
+// product
+Route::get('/products', [ProductController::class, 'getAllProducts']);
+Route::get('/products/create', [ProductController::class, 'createProduct']);
+Route::get('/products/update', [ProductController::class, 'updateProduct']);
+Route::get('/products/delete', [ProductController::class, 'deleteProduct']);
+Route::get('/products/first_or_create', [ProductController::class, 'firstOrCreate']);
+Route::get('/products/update_or_create', [ProductController::class, 'updateOrCreate']);

@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('color');
             $table->string('size');
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
