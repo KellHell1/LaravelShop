@@ -1,8 +1,6 @@
 @extends('layouts.main')
 @section('content')
     <div>
-        products
+        This is main
     </div>
 @endsection
-
-
