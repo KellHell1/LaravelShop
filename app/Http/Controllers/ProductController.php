@@ -16,7 +16,7 @@ class ProductController extends Controller
     public function createProduct()
     {
         Product::create([
-            'name' => 'MAZDA',
+            'title' => 'MAZDA',
             'description' => 'description',
             'details' => 'It is very long description',
             'active' => true,
@@ -33,7 +33,7 @@ class ProductController extends Controller
         $product = Product::find(1);
 
         $product->update([
-            'name' => 'MERS',
+            'title' => 'MERS',
             'description' => 'description'
         ]);
 
@@ -56,9 +56,9 @@ class ProductController extends Controller
     public function firstOrCreate()
     {
         $product = Product::firstOrCreate([
-            'name' => 'Lexus'
+            'title' => 'Lexus'
         ], [
-            'name' => 'Lexus',
+            'title' => 'Lexus',
             'description' => 'new description',
             'details' => 'It is very long description',
             'active' => true,
@@ -73,9 +73,9 @@ class ProductController extends Controller
     public function updateOrCreate()
     {
         $product = Product::updateOrCreate([
-            'name' => 'Coco'
+            'title' => 'Coco'
         ], [
-                'name' => 'Fiat',
+                'title' => 'Fiat',
                 'description' => 'new description',
                 'details' => 'It is very long description',
                 'active' => true,
